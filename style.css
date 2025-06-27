@@ -167,3 +167,15 @@ h2 { font-size: clamp(1.3rem, 4vw, 1.8rem); line-height: 1.5; }
      margin-top: 1.5rem;
      opacity: 0.9;
 }
+
+/* Footer credit styling */
+.footer {
+    font-family: 'Patrick Hand', cursive;
+    font-size: clamp(0.8rem, 2.5vw, 1rem); /* Adjusted font size for longer text */
+    color: var(--button-text);
+    margin-top: 3rem; /* Adds space above the footer */
+    width: 100%;
+    text-align: center;
+    opacity: 0.8;
+    line-height: 1.4; /* Added for better line spacing */
+}
