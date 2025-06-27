@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pookie’s Dil Se Adventure 🌸💗</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Main container for the Three.js canvas -->
+    <div id="canvas-container"></div>
+    
+    <!-- Container for the final message overlay -->
+    <div id="final-message-container" class="final-message-container">
+         <p id="final-message-text" class="final-message-text"></p>
+    </div>
+
+    <!-- Scene: Introduction -->
+    <div id="scene-intro" class="scene active">
+        <h1>Pookie’s Dil Se Adventure 🌸💗</h1>
+        <div class="button-container">
+            <button id="start-btn" class="btn">Chalo Shuru Karein!</button>
+        </div>
+    </div>
+
+    <!-- Scene: Question 1 -->
+    <div id="scene-q1" class="scene">
+        <h2>Kya tum mujhse dil se baat karna chahogi, Pookie? 💖</h2>
+        <div class="button-container">
+            <button class="btn yes-btn" data-next="scene-q2">Haan!</button>
+            <button id="no-btn-q1" class="btn">Naa...</button>
+        </div>
+        <p class="response-text"></p>
+    </div>
+
+    <!-- Scene: Question 2 -->
+    <div id="scene-q2" class="scene">
+        <h2>Agar main ek flower hota, kya tum mujhe roz paani deti? 🌷</h2>
+        <div class="button-container">
+            <button class="btn yes-btn" data-response="Tum toh full-time pyari ho! 🥰" data-next="scene-q3">Of course!</button>
+            <button class="btn no-btn" data-response="Haww... chalo koi nahi!" data-next="scene-q3">Nahi deti!</button>
+        </div>
+        <p class="response-text"></p>
+    </div>
+
+    <!-- Scene: Question 3 -->
+    <div id="scene-q3" class="scene">
+        <h2>Kya tumhara favorite color bhi pink hai? 💗</h2>
+        <div class="button-container">
+            <button class="btn yes-btn" data-response="Pink gang unite! 💅✨" data-next="scene-q4">Yesss!</button>
+            <button class="btn no-btn" data-response="Tumhara favorite bhi special hai 🌈" data-next="scene-q4">Nope!</button>
+        </div>
+        <p class="response-text"></p>
+    </div>
+
+    <!-- Scene: Question 4 -->
+    <div id="scene-q4" class="scene">
+        <h2>Agar tumhari smile ek flower hoti, toh kaunsa hota?</h2>
+        <div class="button-container">
+            <span class="emoji-choice" data-next="scene-q5" data-message="Aww, cherry blossom! Jaise Japan ki beauty, waise tumhari smile. 🌸">🌸</span>
+            <span class="emoji-choice" data-next="scene-q5" data-message="Rose! Classic, beautiful aur pyaar se bhari, bilkul tumhari tarah. 🌹">🌹</span>
+            <span class="emoji-choice" data-next="scene-q5" data-message="Daisy! Simple, sweet aur har kisi ka din bright kar deti hai. 🌼">🌼</span>
+            <span class="emoji-choice" data-next="scene-q5" data-message="Sunflower! Hamesha sunshine ki taraf, full of happiness and positivity. 🌻">🌻</span>
+        </div>
+        <p class="response-text"></p>
+    </div>
+
+    <!-- Scene: Question 5 (Final) -->
+    <div id="scene-q5" class="scene">
+        <h2>Kya tum mere dil ke tree par ek leaf banna chahogi? 🌿❤️</h2>
+        <div class="button-container">
+            <button id="final-yes-btn" class="btn">Yes, I'd love to! 💖</button>
+            <button id="final-no-btn" class="btn">No...</button>
+        </div>
+    </div>
+    
+    <!-- External Libraries & Scripts -->
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.157.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.157.0/examples/jsm/"
+        }
+    }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.77/Tone.js"></script>
+    
+    <!-- Main Application Script -->
+    <script type="module" src="script.js" defer></script>
+</body>
+</html>
+
