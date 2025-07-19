@@ -386,9 +386,9 @@ function growHeartTree(isYesPath) {
         const msgContainer = document.getElementById('final-message-container');
         const msgText = document.getElementById('final-message-text');
         if (isYesPath) {
-            msgText.innerHTML = `Tum mere Heart Tree ka hissa ho, Pookie 💝`;
+            msgText.innerHTML = `Ab aap mere Heart Tree ka hissa ho, 💝`;
         } else {
-            msgText.innerHTML = `Chahe tum 'No' kaho...<br>par main tumhe hamesha pyaar karunga 💌`;
+            msgText.innerHTML = `Chahe aap 'No' kaho...<br>par main aapko hamesha yaad karunga 💌`;
         }
         gsap.timeline()
             .to(msgContainer, { visibility: 'visible', opacity: 1, duration: 1.5 })
